@@ -1,7 +1,4 @@
 @use "abstracts" as *;
 @use "base" as *;
 @use "components" as *;
-
-.test {
-  color: $primary;
-}
+@use "layout" as *;

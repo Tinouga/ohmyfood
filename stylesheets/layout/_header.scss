@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 14px 0 5px 0;
+
+  span {
+    font-family: Shrikhand, sans-serif;
+    font-weight: 400;
+    color: $black;
+    font-size: 1.875rem;
+    cursor: default;
+  }
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $grey2;
+  height: 3.125rem;
+  gap: 17px;
+  i {
+    color: $grey;
+  }
+  span {
+    color: $grey;
+    font-weight: 500;
+  }
+}

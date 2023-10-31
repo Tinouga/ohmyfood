@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+  background: $grey;
+  .logo {
+    font-family: Shrikhand, sans-serif;
+    font-size: 1.125rem;
+    color: $white;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+.footer__link {
+  color: $white;
+  &--emphasized {
+    font-weight: 500;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    i {
+      font-size: 0.8125rem;
+    }
+  }
+}

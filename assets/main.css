@@ -1,5 +1,98 @@
-.test {
-  color: #9356DC;
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/assets/fonts/Shrikhand-Regular.ttf");
+}
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 14px 0 5px 0;
+}
+.logo-container span {
+  font-family: Shrikhand, sans-serif;
+  font-weight: 400;
+  color: #101010;
+  font-size: 1.875rem;
+  cursor: default;
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  height: 3.125rem;
+  gap: 17px;
+}
+.location-container i {
+  color: #353535;
+}
+.location-container span {
+  color: #353535;
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+  background: #353535;
+}
+footer .logo {
+  font-family: Shrikhand, sans-serif;
+  font-size: 1.125rem;
+  color: #FFFFFF;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer__link {
+  color: #FFFFFF;
+}
+.footer__link--emphasized {
+  font-weight: 500;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+.footer__link--emphasized i {
+  font-size: 0.8125rem;
 }
 
 /*# sourceMappingURL=main.css.map */

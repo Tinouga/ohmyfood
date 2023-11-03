@@ -93,6 +93,7 @@ footer .logo {
   font-family: Shrikhand, sans-serif;
   font-size: 1.125rem;
   color: #FFFFFF;
+  cursor: default;
 }
 footer ul {
   display: flex;
@@ -168,6 +169,7 @@ body {
   padding: 0 2rem;
   margin-left: 0.75rem;
   font-weight: 500;
+  cursor: pointer;
 }
 .howtouse-container li i {
   font-size: 1rem;

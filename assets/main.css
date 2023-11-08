@@ -45,6 +45,25 @@ a {
   color: #FFF;
   padding: 0 1rem;
   font-weight: 500;
+  position: relative;
+  z-index: 0;
+}
+.btn-primary:hover::before {
+  opacity: 1;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 300ms ease-out;
 }
 
 header {
@@ -225,7 +244,31 @@ body {
   gap: 5px;
 }
 .restaurant-card__like-btn {
-  font-size: 1.3125rem;
+  position: relative;
+  padding: 0;
+  mask: image(url("icons/heart_filled.svg")) no-repeat;
+  -webkit-mask: url("icons/heart_filled.svg") no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+.restaurant-card__like-btn object {
+  height: 1.3125rem;
+}
+.restaurant-card__like-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.restaurant-card__like-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  transform: translateY(100%);
+  transition: transform 300ms;
 }
 .restaurant-card__isnew {
   position: absolute;

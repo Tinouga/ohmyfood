@@ -2,15 +2,15 @@
 @use "sass:list";
 
 $spinnerDots: 8;
-$spinnderRadius: 2;
+$spinnerRadius: 2;
 $dotsColors: #9356DC, #9F69D8, #AB7CD4, #B78FCF, #CC68DB, #B78FCF, #AB7CD4, #9F69D8;
 
 @function generateDots($offset: 0) {
   $boxShadows: ();
   @for $i from 1 through $spinnerDots {
     $angle: $i * 360 / $spinnerDots * -1deg;
-    $x: $spinnderRadius * math.cos($angle) * 1em;
-    $y: $spinnderRadius * math.sin($angle) * 1em;
+    $x: $spinnerRadius * math.cos($angle) * 1em;
+    $y: $spinnerRadius * math.sin($angle) * 1em;
     $blur: 0;
     $spread: (($i + $offset * $spinnerDots) % $spinnerDots) / $spinnerDots * -0.5em;
     $color: list.nth($dotsColors, $i);
@@ -30,6 +30,19 @@ $dotsColors: #9356DC, #9F69D8, #AB7CD4, #B78FCF, #CC68DB, #B78FCF, #AB7CD4, #9F6
   }
 }
 
+@keyframes disappearingSpinner {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 
 .homepage-spinner {
   position: fixed;
@@ -39,6 +52,7 @@ $dotsColors: #9356DC, #9F69D8, #AB7CD4, #B78FCF, #CC68DB, #B78FCF, #AB7CD4, #9F6
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.82);
+  animation: disappearingSpinner 460ms 2540ms forwards;
   &__center {
     position: absolute;
     top: 50%;

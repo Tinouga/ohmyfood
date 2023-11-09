@@ -66,6 +66,55 @@ a {
   transition: opacity 300ms ease-out;
 }
 
+@keyframes spinningDots {
+  12.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.125em #9356DC, 0em -2em 0 -0.1875em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.25em #AB7CD4, -2em 0em 0 -0.3125em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.375em #CC68DB, 0em 2em 0 -0.4375em #B78FCF, 1.4142135624em 1.4142135624em 0 0em #AB7CD4, 2em 0em 0 -0.0625em #9F69D8;
+  }
+  25% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.1875em #9356DC, 0em -2em 0 -0.25em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.3125em #AB7CD4, -2em 0em 0 -0.375em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.4375em #CC68DB, 0em 2em 0 0em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.0625em #AB7CD4, 2em 0em 0 -0.125em #9F69D8;
+  }
+  37.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.25em #9356DC, 0em -2em 0 -0.3125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.375em #AB7CD4, -2em 0em 0 -0.4375em #B78FCF, -1.4142135624em 1.4142135624em 0 0em #CC68DB, 0em 2em 0 -0.0625em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.125em #AB7CD4, 2em 0em 0 -0.1875em #9F69D8;
+  }
+  50% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.3125em #9356DC, 0em -2em 0 -0.375em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.4375em #AB7CD4, -2em 0em 0 0em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.0625em #CC68DB, 0em 2em 0 -0.125em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.1875em #AB7CD4, 2em 0em 0 -0.25em #9F69D8;
+  }
+  62.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.375em #9356DC, 0em -2em 0 -0.4375em #9F69D8, -1.4142135624em -1.4142135624em 0 0em #AB7CD4, -2em 0em 0 -0.0625em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.125em #CC68DB, 0em 2em 0 -0.1875em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.25em #AB7CD4, 2em 0em 0 -0.3125em #9F69D8;
+  }
+  75% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.4375em #9356DC, 0em -2em 0 0em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.0625em #AB7CD4, -2em 0em 0 -0.125em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.1875em #CC68DB, 0em 2em 0 -0.25em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.3125em #AB7CD4, 2em 0em 0 -0.375em #9F69D8;
+  }
+  87.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 0em #9356DC, 0em -2em 0 -0.0625em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.125em #AB7CD4, -2em 0em 0 -0.1875em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.25em #CC68DB, 0em 2em 0 -0.3125em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.375em #AB7CD4, 2em 0em 0 -0.4375em #9F69D8;
+  }
+  100% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.0625em #9356DC, 0em -2em 0 -0.125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.1875em #AB7CD4, -2em 0em 0 -0.25em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.3125em #CC68DB, 0em 2em 0 -0.375em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.4375em #AB7CD4, 2em 0em 0 0em #9F69D8;
+  }
+}
+.homepage-spinner {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.82);
+}
+.homepage-spinner__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  border-radius: 1em;
+  box-shadow: 1.4142135624em -1.4142135624em 0 -0.0625em #9356DC, 0em -2em 0 -0.125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.1875em #AB7CD4, -2em 0em 0 -0.25em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.3125em #CC68DB, 0em 2em 0 -0.375em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.4375em #AB7CD4, 2em 0em 0 0em #9F69D8;
+  animation: spinningDots 1500ms linear forwards infinite;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -254,10 +303,6 @@ body {
 .restaurant-card__like-btn object {
   height: 1.3125rem;
 }
-.restaurant-card__like-btn:hover::after {
-  opacity: 1;
-  transform: translateY(0);
-}
 .restaurant-card__like-btn::after {
   content: "";
   position: absolute;
@@ -269,6 +314,14 @@ body {
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   transform: translateY(100%);
   transition: transform 300ms;
+}
+.restaurant-card__like-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.restaurant-card__like-btn--liked::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 .restaurant-card__isnew {
   position: absolute;

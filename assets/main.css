@@ -311,6 +311,9 @@ body {
   cursor: default;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
+.howtouse-container li:last-child i {
+  color: #9356DC;
+}
 @media only screen and (min-width: 768px) {
   .howtouse-container li {
     flex: 1;
@@ -318,6 +321,7 @@ body {
 }
 .howtouse-container li i {
   font-size: 1rem;
+  color: #7E7E7E;
 }
 .howtouse-container__number {
   position: absolute;

@@ -76,6 +76,9 @@ body {
     font-weight: 500;
     cursor: default;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    &:last-child i {
+      color: $primary;
+    }
     @include desktop {
       flex: 1;
       //width: 25%;
@@ -83,6 +86,7 @@ body {
 
     i {
       font-size: 1rem;
+      color: $grey3;
     }
   }
 

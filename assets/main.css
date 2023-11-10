@@ -127,6 +127,11 @@ a {
   box-shadow: 1.4142135624em -1.4142135624em 0 -0.0625em #9356DC, 0em -2em 0 -0.125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.1875em #AB7CD4, -2em 0em 0 -0.25em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.3125em #CC68DB, 0em 2em 0 -0.375em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.4375em #AB7CD4, 2em 0em 0 0em #9F69D8;
   animation: spinningDots 1500ms linear forwards infinite;
 }
+@media only screen and (min-width: 768px) {
+  .homepage-spinner__center {
+    font-size: 2.8em;
+  }
+}
 
 header {
   display: flex;
@@ -137,14 +142,23 @@ header {
 .logo-container {
   display: flex;
   justify-content: center;
-  padding: 14px 0 5px 0;
+  align-items: center;
+  height: 4rem;
 }
-.logo-container span {
-  font-family: Shrikhand, sans-serif;
-  font-weight: 400;
-  color: #101010;
-  font-size: 1.875rem;
-  cursor: default;
+@media only screen and (min-width: 768px) {
+  .logo-container {
+    height: 6rem;
+  }
+}
+.logo-container img {
+  height: 2rem;
+  margin-top: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .logo-container img {
+    height: 2.1rem;
+    margin-top: 0;
+  }
 }
 
 .location-container {
@@ -166,20 +180,42 @@ header {
 footer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 22px 25px;
+  gap: 1rem;
+  padding: 1.38rem 1.56rem;
   background: #353535;
+}
+@media only screen and (min-width: 768px) {
+  footer {
+    flex-direction: row-reverse;
+    padding: 1.88rem 1.56rem;
+    height: 7.125rem;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
 }
 footer .logo {
   font-family: Shrikhand, sans-serif;
   font-size: 1.125rem;
   color: #FFFFFF;
   cursor: default;
+  margin-right: 2.63rem;
 }
 footer ul {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0.44rem;
+}
+@media only screen and (min-width: 768px) {
+  footer ul {
+    flex-direction: row;
+    gap: 0.7rem;
+  }
+  footer ul li:nth-child(2) {
+    margin-right: 2rem;
+  }
+  footer ul li:last-child {
+    margin-right: 3rem;
+  }
 }
 
 .footer__link {
@@ -188,7 +224,7 @@ footer ul {
 .footer__link--emphasized {
   font-weight: 500;
   display: flex;
-  gap: 11px;
+  gap: 0.688rem;
   align-items: center;
 }
 .footer__link--emphasized i {
@@ -202,42 +238,64 @@ body {
 .discover-container {
   display: flex;
   flex-direction: column;
-  padding: 39px 0 57px 0;
+  padding: 2.44rem 0 3.56rem 0;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .discover-container {
+    padding: 1.87rem 0;
+    gap: 1.12rem;
+  }
 }
 .discover-container h1 {
   font-size: 1.5rem;
   margin: 0 58px;
   text-align: center;
-  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .discover-container h1 {
+    font-size: 2.5rem;
+  }
 }
 .discover-container p {
   padding: 0 26px;
   text-align: center;
   font-size: 1.125rem;
   font-weight: 300;
+  margin: 1rem 0 2rem 0;
 }
-.discover-container button {
-  margin-top: 2rem;
+@media only screen and (min-width: 768px) {
+  .discover-container p {
+    margin: 0;
+  }
 }
 
-.howtouse-container, .restaurants-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.625rem;
-}
 .howtouse-container h2, .restaurants-container h2 {
   font-size: 1.5rem;
 }
 
 .howtouse-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
   background: #FFFFFF;
-  padding: 48px 20px 68px 20px;
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .howtouse-container {
+    gap: 1.56rem;
+    padding: 3.12rem 12vw;
+  }
 }
 .howtouse-container ol {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .howtouse-container ol {
+    flex-direction: row;
+  }
 }
 .howtouse-container li {
   position: relative;
@@ -250,7 +308,13 @@ body {
   padding: 0 2rem;
   margin-left: 0.75rem;
   font-weight: 500;
-  cursor: pointer;
+  cursor: default;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+@media only screen and (min-width: 768px) {
+  .howtouse-container li {
+    flex: 1;
+  }
 }
 .howtouse-container li i {
   font-size: 1rem;
@@ -270,16 +334,41 @@ body {
 }
 
 .restaurants-container {
-  padding: 54px 0 66px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 3.37rem 1.12rem 4.12rem 1.06rem;
+}
+@media only screen and (min-width: 768px) {
+  .restaurants-container {
+    gap: 1.75rem;
+    padding: 1.88rem 12vw;
+  }
 }
 .restaurants-container h2 {
-  margin: 0 20px;
+  margin: 0 0.19rem;
+}
+@media only screen and (min-width: 768px) {
+  .restaurants-container h2 {
+    margin: 0;
+  }
 }
 .restaurants-container ul {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 0 18px;
+  gap: 1.12rem;
+}
+@media only screen and (min-width: 768px) {
+  .restaurants-container ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3.12rem;
+    column-gap: 0;
+  }
+  .restaurants-container ul li {
+    width: 46%;
+  }
 }
 
 .restaurant-card {
@@ -290,15 +379,20 @@ body {
   position: relative;
 }
 .restaurant-card img {
-  height: 174px;
+  height: 10.875rem;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 .restaurant-card__content {
   display: flex;
-  padding: 16px 25px 16px 13px;
+  padding: 1rem 1.56rem 1rem 0.81rem;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .restaurant-card__content {
+    padding-left: 1.17rem;
+  }
 }
 .restaurant-card__txt {
   display: flex;

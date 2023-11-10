@@ -3,29 +3,53 @@
 footer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 22px 25px;
+  gap: 1rem;
+  padding: 1.38rem 1.56rem;
   background: $grey;
+  @include desktop {
+    flex-direction: row-reverse;
+    padding: 1.88rem 1.56rem;
+    height: 7.125rem;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
   .logo {
     font-family: Shrikhand, sans-serif;
     font-size: 1.125rem;
     color: $white;
     cursor: default;
+    margin-right: 2.63rem;
   }
+
   ul {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 0.44rem;
+    @include desktop {
+      flex-direction: row;
+      gap: 0.7rem;
+      li {
+        &:nth-child(2) {
+          margin-right: 2rem;
+        }
+        &:last-child {
+          margin-right: 3rem;
+        }
+      }
+    }
   }
 }
 
 .footer__link {
   color: $white;
+
   &--emphasized {
     font-weight: 500;
     display: flex;
-    gap: 11px;
+    gap: 0.688rem;
     align-items: center;
+
     i {
       font-size: 0.8125rem;
     }

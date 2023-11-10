@@ -3,3 +3,12 @@
     @content;
   }
 }
+
+/**
+ * used when needed to make the transition between mobile and desktop UIs smoother
+ */
+@mixin tablet {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}

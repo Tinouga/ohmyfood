@@ -38,6 +38,13 @@ footer {
         }
       }
     }
+    @include tablet {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 100%;
+      margin-right: 12rem;
+      column-gap: 2rem;
+    }
   }
 }
 

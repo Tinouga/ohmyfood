@@ -1,3 +1,6 @@
+/**
+ * used when needed to make the transition between mobile and desktop UIs smoother
+ */
 @font-face {
   font-family: "Shrikhand";
   src: url("/assets/fonts/Shrikhand-Regular.ttf");
@@ -112,7 +115,7 @@ a {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.82);
-  animation: disappearingSpinner 460ms 2540ms forwards;
+  animation: disappearingSpinner 460ms 1540ms forwards;
 }
 .homepage-spinner__center {
   position: absolute;
@@ -217,6 +220,15 @@ footer ul {
     margin-right: 3rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  footer ul {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-right: 12rem;
+    column-gap: 2rem;
+  }
+}
 
 .footer__link {
   color: #FFFFFF;
@@ -287,6 +299,11 @@ body {
     padding: 3.12rem 12vw;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .howtouse-container {
+    padding: 3.12rem 6vw;
+  }
+}
 .howtouse-container ol {
   display: flex;
   flex-direction: column;
@@ -347,6 +364,11 @@ body {
   .restaurants-container {
     gap: 1.75rem;
     padding: 1.88rem 12vw;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants-container {
+    padding: 1.88rem 6vw;
   }
 }
 .restaurants-container h2 {

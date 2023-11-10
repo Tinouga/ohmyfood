@@ -51,6 +51,9 @@ body {
     gap: 1.56rem;
     padding: 3.12rem 12vw;
   }
+  @include tablet {
+    padding: 3.12rem 6vw;
+  }
 
   ol {
     display: flex;
@@ -113,6 +116,9 @@ body {
   @include desktop {
     gap: 1.75rem;
     padding: 1.88rem 12vw;
+  }
+  @include tablet {
+    padding: 1.88rem 6vw;
   }
 
   h2 {

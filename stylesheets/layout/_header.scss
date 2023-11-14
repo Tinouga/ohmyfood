@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-header {
+body > header {
   display: flex;
   flex-direction: column;
   background: $white;

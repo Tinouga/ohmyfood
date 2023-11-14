@@ -1,0 +1,169 @@
+@use "../abstracts" as *;
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-restaurant {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 275px;
+  z-index: -1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  margin-top: 220px;
+  flex: 1;
+  border-radius: 30px 30px 0 0;
+  background: $background;
+  padding: 2rem 0.813rem 2.5rem 0.813rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  > header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  > footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__restaurant-name {
+    font-family: Shrikhand, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+
+  &__like-btn {
+    position: relative;
+    padding: 0;
+    mask: image(url("icons/heart_filled.svg")) no-repeat;
+    -webkit-mask: url("icons/heart_filled.svg") no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+
+    object {
+      height: 1.3125rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+      transform: translateY(100%);
+      transition: transform 300ms;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &--liked {
+      &::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 0.188rem;
+      margin-top: 0.5rem;
+      background: $tertiary;
+    }
+  }
+}
+
+.dish {
+  display: flex;
+  border-radius: 1rem;
+  background: $white;
+  box-shadow: 0 4px 1rem 0 rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+
+  &__content {
+    flex: 1;
+    display: flex;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.313rem;
+    overflow: hidden;
+
+    * {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__price {
+    align-self: flex-end;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &::after {
+    display: flex;
+    align-items: center;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f058";
+    background: $tertiary;
+    color: $white;
+    font-size: 1.25rem;
+    padding: 0 1.25rem;
+    border-radius: 0 1rem 1rem 0;
+  }
+}

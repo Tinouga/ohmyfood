@@ -116,12 +116,16 @@ main {
   background: $white;
   box-shadow: 0 4px 1rem 0 rgba(0, 0, 0, 0.10);
   cursor: pointer;
+  overflow: hidden;
 
   &__content {
+    //width: calc(100% + 3.75rem);
+    //box-sizing: border-box;
     flex: 1;
     display: flex;
     padding: 0.75rem 1rem;
     gap: 0.5rem;
+    overflow: hidden;
   }
 
   &__text {
@@ -156,6 +160,7 @@ main {
   &::after {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
@@ -163,7 +168,41 @@ main {
     background: $tertiary;
     color: $white;
     font-size: 1.25rem;
-    padding: 0 1.25rem;
+    //padding: 0 1.25rem;
+    width: 3.75rem;
     border-radius: 0 1rem 1rem 0;
+  }
+}
+
+.test {
+  display: flex;
+  border-radius: 1rem;
+  background: $white;
+  box-shadow: 0 4px 1rem 0 rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    .container-1 {
+      flex-basis: calc(100% - 200px);
+    }
+  }
+
+  .container-1 {
+    overflow: hidden;
+    background: red;
+    display: flex;
+    flex: 0 0 100%;
+    transition: flex-basis 300ms;
+    span {
+      flex: 1;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .container-2 {
+    background: grey;
+    flex: 0 0 200px;
   }
 }

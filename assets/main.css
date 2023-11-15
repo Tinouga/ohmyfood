@@ -572,11 +572,13 @@ main {
   overflow: hidden;
 }
 .dish__content {
-  flex: 1;
   display: flex;
   padding: 0.75rem 1rem;
   gap: 0.5rem;
   overflow: hidden;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  transition: flex-basis 300ms;
 }
 .dish__text {
   flex: 1;
@@ -613,37 +615,11 @@ main {
   background: #99E2D0;
   color: #FFFFFF;
   font-size: 1.25rem;
-  width: 3.75rem;
+  flex: 0 0 3.75rem;
   border-radius: 0 1rem 1rem 0;
 }
-
-.test {
-  display: flex;
-  border-radius: 1rem;
-  background: #FFFFFF;
-  box-shadow: 0 4px 1rem 0 rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  overflow: hidden;
-}
-.test:hover .container-1 {
-  flex-basis: calc(100% - 200px);
-}
-.test .container-1 {
-  overflow: hidden;
-  background: red;
-  display: flex;
-  flex: 0 0 100%;
-  transition: flex-basis 300ms;
-}
-.test .container-1 span {
-  flex: 1;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.test .container-2 {
-  background: grey;
-  flex: 0 0 200px;
+.dish:hover .dish__content {
+  flex-basis: calc(100% - 3.75rem);
 }
 
 /*# sourceMappingURL=main.css.map */

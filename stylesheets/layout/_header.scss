@@ -4,6 +4,7 @@ body > header {
   display: flex;
   flex-direction: column;
   background: $white;
+  position: relative;
 }
 
 .logo-container {
@@ -46,5 +47,17 @@ body > header {
   span {
     color: $grey;
     font-weight: 500;
+  }
+}
+
+.btn-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.06rem;
+
+  i {
+    color: $black;
+    font-size: 1.875rem;
   }
 }

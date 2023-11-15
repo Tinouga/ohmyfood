@@ -1,11 +1,24 @@
 /**
  * used when needed to make the transition between mobile and desktop UIs smoother
  */
+@keyframes dishes_appearance {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url("/assets/fonts/Shrikhand-Regular.ttf");
 }
-html, body, ol, ul, p, h1, h2, h3, h4, h5, h6 {
+html, body, ol, ul, p, h1, h2, h3, h4, h5, h6, button {
   margin: 0;
   padding: 0;
 }
@@ -140,6 +153,7 @@ body > header {
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
+  position: relative;
 }
 
 .logo-container {
@@ -178,6 +192,17 @@ body > header {
 .location-container span {
   color: #353535;
   font-weight: 500;
+}
+
+.btn-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.06rem;
+}
+.btn-back i {
+  color: #101010;
+  font-size: 1.875rem;
 }
 
 body > footer {
@@ -468,6 +493,10 @@ body {
   font-weight: 500;
 }
 
+body {
+  background: #FFFFFF;
+}
+
 main {
   position: relative;
   display: flex;
@@ -480,6 +509,11 @@ main {
   width: 100%;
   height: 275px;
   z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .bg-restaurant {
+    height: 383px;
+  }
 }
 .bg-restaurant img {
   width: 100%;
@@ -496,6 +530,22 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .menu {
+    margin: 343px auto 0 auto;
+    box-sizing: border-box;
+    width: 76vw;
+    max-width: 1440px;
+    padding: 3.19rem min(12vw, 14rem) 2.5rem min(12vw, 14rem);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    margin: 343px 6vw 0 6vw;
+    width: auto;
+    padding: 3.19rem 6vw 2.5rem 6vw;
+  }
 }
 .menu > header {
   display: flex;
@@ -620,6 +670,70 @@ main {
 }
 .dish:hover .dish__content {
   flex-basis: calc(100% - 3.75rem);
+}
+
+.course-card > * {
+  animation: dishes_appearance 380ms both cubic-bezier(0.15, 0.94, 0.33, 0.97);
+}
+.course-card > *.order-1 {
+  animation-delay: 120ms;
+}
+.course-card > *.order-2 {
+  animation-delay: 240ms;
+}
+.course-card > *.order-3 {
+  animation-delay: 360ms;
+}
+.course-card > *.order-4 {
+  animation-delay: 480ms;
+}
+.course-card > *.order-5 {
+  animation-delay: 600ms;
+}
+.course-card > *.order-6 {
+  animation-delay: 720ms;
+}
+.course-card > *.order-7 {
+  animation-delay: 840ms;
+}
+.course-card > *.order-8 {
+  animation-delay: 960ms;
+}
+.course-card > *.order-9 {
+  animation-delay: 1080ms;
+}
+.course-card > *.order-10 {
+  animation-delay: 1200ms;
+}
+.course-card > *.order-11 {
+  animation-delay: 1320ms;
+}
+.course-card > *.order-12 {
+  animation-delay: 1440ms;
+}
+.course-card > *.order-13 {
+  animation-delay: 1560ms;
+}
+.course-card > *.order-14 {
+  animation-delay: 1680ms;
+}
+.course-card > *.order-15 {
+  animation-delay: 1800ms;
+}
+.course-card > *.order-16 {
+  animation-delay: 1920ms;
+}
+.course-card > *.order-17 {
+  animation-delay: 2040ms;
+}
+.course-card > *.order-18 {
+  animation-delay: 2160ms;
+}
+.course-card > *.order-19 {
+  animation-delay: 2280ms;
+}
+.course-card > *.order-20 {
+  animation-delay: 2400ms;
 }
 
 /*# sourceMappingURL=main.css.map */

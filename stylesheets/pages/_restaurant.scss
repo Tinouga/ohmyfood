@@ -1,5 +1,9 @@
 @use "../abstracts" as *;
 
+body {
+  background: $white;
+}
+
 main {
   position: relative;
   display: flex;
@@ -12,6 +16,10 @@ main {
   width: 100%;
   height: 275px;
   z-index: -1;
+
+  @include desktop {
+    height: 383px;
+  }
 
   img {
     width: 100%;
@@ -29,6 +37,24 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+
+  //@include desktop {
+  //  margin: 343px 12vw 0 12vw;
+  //  padding: 3.19rem 12vw 2.5rem 12vw;
+  //}
+
+  @include desktop {
+    margin: 343px auto 0 auto;
+    box-sizing: border-box;
+    width: 76vw;
+    max-width: 1440px;
+    padding: 3.19rem min(12vw, 14rem) 2.5rem min(12vw, 14rem);
+  }
+  @include tablet {
+    margin: 343px 6vw 0 6vw;
+    width: auto;
+    padding: 3.19rem 6vw 2.5rem 6vw;
+  }
 
   > header {
     display: flex;
@@ -175,6 +201,16 @@ main {
   &:hover {
     .dish__content {
       flex-basis: calc(100% - 3.75rem);
+    }
+  }
+}
+
+.course-card > * {
+  animation: dishes_appearance 380ms both cubic-bezier(.15,.94,.33,.97);
+
+  @for $i from 1 through 20 {
+    &.order-#{$i} {
+      animation-delay: $i * 120ms;
     }
   }
 }

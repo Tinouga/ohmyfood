@@ -16,7 +16,7 @@
 }
 @font-face {
   font-family: "Shrikhand";
-  src: url("/assets/fonts/Shrikhand-Regular.ttf");
+  src: url("fonts/Shrikhand-Regular.ttf");
 }
 html, body, ol, ul, p, h1, h2, h3, h4, h5, h6, button {
   margin: 0;

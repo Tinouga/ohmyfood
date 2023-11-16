@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-body {
+.bg-restaurant-page {
   background: $white;
 }
 
@@ -19,6 +19,9 @@ main {
 
   @include desktop {
     height: 383px;
+  }
+  @include tablet {
+    height: 330px;
   }
 
   img {
@@ -51,7 +54,7 @@ main {
     padding: 3.19rem min(12vw, 14rem) 2.5rem min(12vw, 14rem);
   }
   @include tablet {
-    margin: 343px 6vw 0 6vw;
+    margin: 290px 6vw 0 6vw;
     width: auto;
     padding: 3.19rem 6vw 2.5rem 6vw;
   }
@@ -72,46 +75,6 @@ main {
     font-family: Shrikhand, sans-serif;
     font-size: 1.75rem;
     font-weight: 400;
-  }
-
-  &__like-btn {
-    position: relative;
-    padding: 0;
-    mask: image(url("icons/heart_filled.svg")) no-repeat;
-    -webkit-mask: url("icons/heart_filled.svg") no-repeat;
-    mask-size: contain;
-    -webkit-mask-size: contain;
-
-    object {
-      height: 1.3125rem;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 1;
-      background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-      transform: translateY(100%);
-      transition: transform 300ms;
-    }
-
-    &:hover {
-      &::after {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    &--liked {
-      &::after {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   }
 }
 

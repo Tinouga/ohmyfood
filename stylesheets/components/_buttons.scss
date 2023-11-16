@@ -13,6 +13,7 @@
   color: #FFF;
   padding: 0 1rem;
   font-weight: 500;
+  font-size: 1rem;
   position: relative;
   z-index: 0;
   &:hover {
@@ -34,5 +35,45 @@
     z-index: -1;
     opacity: 0;
     transition: opacity 300ms ease-out;
+  }
+}
+
+.btn-like {
+  position: relative;
+  padding: 0;
+  mask: image(url("icons/heart_filled.svg")) no-repeat;
+  -webkit-mask: url("icons/heart_filled.svg") no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+
+  object {
+    height: 1.3125rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+    transform: translateY(100%);
+    transition: transform 300ms;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.liked {
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

@@ -61,6 +61,7 @@ a {
   color: #FFF;
   padding: 0 1rem;
   font-weight: 500;
+  font-size: 1rem;
   position: relative;
   z-index: 0;
 }
@@ -80,6 +81,38 @@ a {
   z-index: -1;
   opacity: 0;
   transition: opacity 300ms ease-out;
+}
+
+.btn-like {
+  position: relative;
+  padding: 0;
+  mask: image(url("icons/heart_filled.svg")) no-repeat;
+  -webkit-mask: url("icons/heart_filled.svg") no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+.btn-like object {
+  height: 1.3125rem;
+}
+.btn-like::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  transform: translateY(100%);
+  transition: transform 300ms;
+}
+.btn-like:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.btn-like.liked::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes spinningDots {
@@ -450,37 +483,6 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.restaurant-card__like-btn {
-  position: relative;
-  padding: 0;
-  mask: image(url("icons/heart_filled.svg")) no-repeat;
-  -webkit-mask: url("icons/heart_filled.svg") no-repeat;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-}
-.restaurant-card__like-btn object {
-  height: 1.3125rem;
-}
-.restaurant-card__like-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  transform: translateY(100%);
-  transition: transform 300ms;
-}
-.restaurant-card__like-btn:hover::after {
-  opacity: 1;
-  transform: translateY(0);
-}
-.restaurant-card__like-btn--liked::after {
-  opacity: 1;
-  transform: translateY(0);
-}
 .restaurant-card__isnew {
   position: absolute;
   top: 13px;
@@ -493,7 +495,7 @@ body {
   font-weight: 500;
 }
 
-body {
+.bg-restaurant-page {
   background: #FFFFFF;
 }
 
@@ -513,6 +515,11 @@ main {
 @media only screen and (min-width: 768px) {
   .bg-restaurant {
     height: 383px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .bg-restaurant {
+    height: 330px;
   }
 }
 .bg-restaurant img {
@@ -542,7 +549,7 @@ main {
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .menu {
-    margin: 343px 6vw 0 6vw;
+    margin: 290px 6vw 0 6vw;
     width: auto;
     padding: 3.19rem 6vw 2.5rem 6vw;
   }
@@ -561,37 +568,6 @@ main {
   font-family: Shrikhand, sans-serif;
   font-size: 1.75rem;
   font-weight: 400;
-}
-.menu__like-btn {
-  position: relative;
-  padding: 0;
-  mask: image(url("icons/heart_filled.svg")) no-repeat;
-  -webkit-mask: url("icons/heart_filled.svg") no-repeat;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-}
-.menu__like-btn object {
-  height: 1.3125rem;
-}
-.menu__like-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  transform: translateY(100%);
-  transition: transform 300ms;
-}
-.menu__like-btn:hover::after {
-  opacity: 1;
-  transform: translateY(0);
-}
-.menu__like-btn--liked::after {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .course-card {

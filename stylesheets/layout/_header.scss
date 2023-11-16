@@ -60,4 +60,26 @@ body > header {
     color: $black;
     font-size: 1.875rem;
   }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-solid);
+    content: "\f060";
+    color: $tertiary;
+    font-size: 1.875rem;
+    opacity: 0.2;
+    transition: transform 200ms ease-out, opacity 100ms ease-out;
+  }
+
+  &:hover {
+    &::after {
+      transform: translate(0.12rem, 0.14rem);
+      opacity: 0.8;
+    }
+  }
 }

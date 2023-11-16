@@ -237,6 +237,24 @@ body > header {
   color: #101010;
   font-size: 1.875rem;
 }
+.btn-back::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f060";
+  color: #99E2D0;
+  font-size: 1.875rem;
+  opacity: 0.2;
+  transition: transform 200ms ease-out, opacity 100ms ease-out;
+}
+.btn-back:hover::after {
+  transform: translate(0.12rem, 0.14rem);
+  opacity: 0.8;
+}
 
 body > footer {
   display: flex;

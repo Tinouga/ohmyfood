@@ -41,11 +41,6 @@ main {
   flex-direction: column;
   gap: 2.5rem;
 
-  //@include desktop {
-  //  margin: 343px 12vw 0 12vw;
-  //  padding: 3.19rem 12vw 2.5rem 12vw;
-  //}
-
   @include desktop {
     margin: 343px auto 0 auto;
     box-sizing: border-box;

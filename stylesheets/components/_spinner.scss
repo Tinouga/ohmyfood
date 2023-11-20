@@ -1,49 +1,4 @@
-@use "sass:math";
-@use "sass:list";
 @use "../abstracts" as *;
-
-$spinnerDots: 8;
-$spinnerRadius: 2;
-$dotsColors: #9356DC, #9F69D8, #AB7CD4, #B78FCF, #CC68DB, #B78FCF, #AB7CD4, #9F69D8;
-
-@function generateDots($offset: 0) {
-  $boxShadows: ();
-  @for $i from 1 through $spinnerDots {
-    $angle: $i * 360 / $spinnerDots * -1deg;
-    $x: $spinnerRadius * math.cos($angle) * 1em;
-    $y: $spinnerRadius * math.sin($angle) * 1em;
-    $blur: 0;
-    $spread: (($i + $offset * $spinnerDots) % $spinnerDots) / $spinnerDots * -0.5em;
-    $color: list.nth($dotsColors, $i);
-
-    $boxShadows: append($boxShadows, $x $y $blur $spread $color, comma);
-  }
-  @return $boxShadows;
-}
-
-@keyframes spinningDots {
-  @for $i from 1 through $spinnerDots {
-    $percentage: math.percentage($i / $spinnerDots);
-
-    #{$percentage} {
-      box-shadow: generateDots($i/$spinnerDots);
-    }
-  }
-}
-
-@keyframes disappearingSpinner {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-
 
 .homepage-spinner {
   position: fixed;

@@ -1,4 +1,10 @@
 /**
+ * Colors
+ */
+/**
+ * Loader
+ */
+/**
  * used when needed to make the transition between mobile and desktop UIs smoother
  */
 @keyframes dishes_appearance {
@@ -12,6 +18,44 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes spinningDots {
+  12.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.125em #9356DC, 0em -2em 0 -0.1875em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.25em #AB7CD4, -2em 0em 0 -0.3125em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.375em #CC68DB, 0em 2em 0 -0.4375em #B78FCF, 1.4142135624em 1.4142135624em 0 0em #AB7CD4, 2em 0em 0 -0.0625em #9F69D8;
+  }
+  25% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.1875em #9356DC, 0em -2em 0 -0.25em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.3125em #AB7CD4, -2em 0em 0 -0.375em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.4375em #CC68DB, 0em 2em 0 0em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.0625em #AB7CD4, 2em 0em 0 -0.125em #9F69D8;
+  }
+  37.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.25em #9356DC, 0em -2em 0 -0.3125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.375em #AB7CD4, -2em 0em 0 -0.4375em #B78FCF, -1.4142135624em 1.4142135624em 0 0em #CC68DB, 0em 2em 0 -0.0625em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.125em #AB7CD4, 2em 0em 0 -0.1875em #9F69D8;
+  }
+  50% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.3125em #9356DC, 0em -2em 0 -0.375em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.4375em #AB7CD4, -2em 0em 0 0em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.0625em #CC68DB, 0em 2em 0 -0.125em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.1875em #AB7CD4, 2em 0em 0 -0.25em #9F69D8;
+  }
+  62.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.375em #9356DC, 0em -2em 0 -0.4375em #9F69D8, -1.4142135624em -1.4142135624em 0 0em #AB7CD4, -2em 0em 0 -0.0625em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.125em #CC68DB, 0em 2em 0 -0.1875em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.25em #AB7CD4, 2em 0em 0 -0.3125em #9F69D8;
+  }
+  75% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.4375em #9356DC, 0em -2em 0 0em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.0625em #AB7CD4, -2em 0em 0 -0.125em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.1875em #CC68DB, 0em 2em 0 -0.25em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.3125em #AB7CD4, 2em 0em 0 -0.375em #9F69D8;
+  }
+  87.5% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 0em #9356DC, 0em -2em 0 -0.0625em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.125em #AB7CD4, -2em 0em 0 -0.1875em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.25em #CC68DB, 0em 2em 0 -0.3125em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.375em #AB7CD4, 2em 0em 0 -0.4375em #9F69D8;
+  }
+  100% {
+    box-shadow: 1.4142135624em -1.4142135624em 0 -0.0625em #9356DC, 0em -2em 0 -0.125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.1875em #AB7CD4, -2em 0em 0 -0.25em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.3125em #CC68DB, 0em 2em 0 -0.375em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.4375em #AB7CD4, 2em 0em 0 0em #9F69D8;
+  }
+}
+@keyframes disappearingSpinner {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @font-face {
@@ -115,44 +159,6 @@ a {
   transform: translateY(0);
 }
 
-@keyframes spinningDots {
-  12.5% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.125em #9356DC, 0em -2em 0 -0.1875em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.25em #AB7CD4, -2em 0em 0 -0.3125em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.375em #CC68DB, 0em 2em 0 -0.4375em #B78FCF, 1.4142135624em 1.4142135624em 0 0em #AB7CD4, 2em 0em 0 -0.0625em #9F69D8;
-  }
-  25% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.1875em #9356DC, 0em -2em 0 -0.25em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.3125em #AB7CD4, -2em 0em 0 -0.375em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.4375em #CC68DB, 0em 2em 0 0em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.0625em #AB7CD4, 2em 0em 0 -0.125em #9F69D8;
-  }
-  37.5% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.25em #9356DC, 0em -2em 0 -0.3125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.375em #AB7CD4, -2em 0em 0 -0.4375em #B78FCF, -1.4142135624em 1.4142135624em 0 0em #CC68DB, 0em 2em 0 -0.0625em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.125em #AB7CD4, 2em 0em 0 -0.1875em #9F69D8;
-  }
-  50% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.3125em #9356DC, 0em -2em 0 -0.375em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.4375em #AB7CD4, -2em 0em 0 0em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.0625em #CC68DB, 0em 2em 0 -0.125em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.1875em #AB7CD4, 2em 0em 0 -0.25em #9F69D8;
-  }
-  62.5% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.375em #9356DC, 0em -2em 0 -0.4375em #9F69D8, -1.4142135624em -1.4142135624em 0 0em #AB7CD4, -2em 0em 0 -0.0625em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.125em #CC68DB, 0em 2em 0 -0.1875em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.25em #AB7CD4, 2em 0em 0 -0.3125em #9F69D8;
-  }
-  75% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.4375em #9356DC, 0em -2em 0 0em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.0625em #AB7CD4, -2em 0em 0 -0.125em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.1875em #CC68DB, 0em 2em 0 -0.25em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.3125em #AB7CD4, 2em 0em 0 -0.375em #9F69D8;
-  }
-  87.5% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 0em #9356DC, 0em -2em 0 -0.0625em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.125em #AB7CD4, -2em 0em 0 -0.1875em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.25em #CC68DB, 0em 2em 0 -0.3125em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.375em #AB7CD4, 2em 0em 0 -0.4375em #9F69D8;
-  }
-  100% {
-    box-shadow: 1.4142135624em -1.4142135624em 0 -0.0625em #9356DC, 0em -2em 0 -0.125em #9F69D8, -1.4142135624em -1.4142135624em 0 -0.1875em #AB7CD4, -2em 0em 0 -0.25em #B78FCF, -1.4142135624em 1.4142135624em 0 -0.3125em #CC68DB, 0em 2em 0 -0.375em #B78FCF, 1.4142135624em 1.4142135624em 0 -0.4375em #AB7CD4, 2em 0em 0 0em #9F69D8;
-  }
-}
-@keyframes disappearingSpinner {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 .homepage-spinner {
   position: fixed;
   z-index: 20;
